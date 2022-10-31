@@ -26,10 +26,10 @@ void ParentProcess(void){
 
 void ChildProcess(void){
 	int i;
-     for (i = 1; i <= rand() % 30 + 1; i++){
+     for (i = 1; i <= rand() % 31; i++){
 			 pid_t pid = getpid();
 			 printf("Child Pid: %d is going to sleep!\n", pid);
-			 sleep(rand()% 10 + 1);
+			 sleep(rand()% 11);
 			 printf("Child Pid: % d is awake!\nWhere is my Parent: %d\n", pid, getppid());
 		 }
 }
